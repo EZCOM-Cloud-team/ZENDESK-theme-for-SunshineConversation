@@ -42,7 +42,8 @@
 
       {{#if section.articles}}
         <ul class="article-list">
-          {{#each section.articles}}
+          {{!-- {{#each  (filter section.articles on="author.name" contains="Emily")}} --}}
+                    {{#each section.articles}}
             <li class="article-list-item {{#if promoted}} article-promoted{{/if}}">
               {{#if promoted}}
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 12 12" class="icon-star" title="{{t 'promoted'}}">
@@ -50,7 +51,9 @@
                 </svg>
               {{/if}}
               <a href="{{url}}" class="article-list-link">{{title}}</a>
+                              <p>{{author.name}}</p>
               <p class="timestamp">{{created_at}}</p>
+              
               {{#if internal}}
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
                   <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
