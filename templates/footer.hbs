@@ -27,15 +27,6 @@
 
 </footer>
 <script>
-	function formatDate(dateString) { // Parse the date string const utcDate = new Date(dateString); // Calculate the offset for the Korea time zone (UTC+9) const koreaOffset = 9 * 60 * 60 * 1000;
-		// Adjust the date by adding the offset const koreanDate = new Date(utcDate.getTime() + koreaOffset); // Format the date as you desire const formattedDate =
-		`${koreanDate.getFullYear()}-${(koreanDate.getMonth() + 1).toString().padStart(2, '0')}-${koreanDate.getDate().toString().padStart(2, '0')}`; return formattedDate;
-	} const timeStamps =
-		document.querySelectorAll('.timestamp'); timeStamps.forEach((node) => {
-			const dateString = node.innerText.trim(); node.innerText = formatDate(dateString); console.log(formatDate(dateString))
-		})
-</script>
-<script>
 	!function (o, d, s, e, f) {
 		var i, a, p, c = [], h = []; function t() {
 			var t = "You must provide a supported major version."; try {
